@@ -21,13 +21,16 @@ class SideMenuViewController: UIViewController {
     var defaultHighlightedCell: Int = 0
 
     var menu: [SideMenuModel] = [
-        SideMenuModel(icon: UIImage(systemName: "house.fill")!, title: "Home"),
-        SideMenuModel(icon: UIImage(systemName: "music.note")!, title: "Music"),
-        SideMenuModel(icon: UIImage(systemName: "film.fill")!, title: "Movies"),
-        SideMenuModel(icon: UIImage(systemName: "book.fill")!, title: "Books"),
-        SideMenuModel(icon: UIImage(systemName: "person.fill")!, title: "Profile"),
-        SideMenuModel(icon: UIImage(systemName: "slider.horizontal.3")!, title: "Settings"),
-        SideMenuModel(icon: UIImage(systemName: "hand.thumbsup.fill")!, title: "Like us on facebook")
+        SideMenuModel(icon: UIImage(systemName: "house.fill")!, title: "Профиль"),
+        SideMenuModel(icon: UIImage(systemName: "music.note")!, title: "Поиск"),
+        SideMenuModel(icon: UIImage(systemName: "film.fill")!, title: "Техподдержка"),
+        SideMenuModel(icon: UIImage(systemName: "book.fill")!, title: "Язык приложения"),
+        SideMenuModel(icon: UIImage(systemName: "house.fill")!, title: "Выход")
+    ]
+    
+    var alternativeMenu: [SideMenuModel] = [
+        SideMenuModel(icon: UIImage(systemName: "house.fill")!, title: "Авторизация"),
+        SideMenuModel(icon: UIImage(systemName: "music.note")!, title: "Поиск"),
     ]
 
     override func viewDidLoad() {
@@ -36,19 +39,8 @@ class SideMenuViewController: UIViewController {
         // TableView
         self.sideMenuTableView.delegate = self
         self.sideMenuTableView.dataSource = self
-        self.sideMenuTableView.backgroundColor = #colorLiteral(red: 0.737254902, green: 0.1294117647, blue: 0.2941176471, alpha: 1)
+        self.sideMenuTableView.backgroundColor = .white
         self.sideMenuTableView.separatorStyle = .none
-
-        // Set Highlighted Cell
-        DispatchQueue.main.async {
-            let defaultRow = IndexPath(row: self.defaultHighlightedCell, section: 0)
-            self.sideMenuTableView.selectRow(at: defaultRow, animated: false, scrollPosition: .none)
-        }
-
-        // Footer
-        self.footerLabel.textColor = UIColor.white
-        self.footerLabel.font = UIFont.systemFont(ofSize: 12, weight: .bold)
-        self.footerLabel.text = "Developed by John Codeos"
 
         // Register TableView Cell
         self.sideMenuTableView.register(SideMenuCell.nib, forCellReuseIdentifier: SideMenuCell.identifier)
@@ -62,7 +54,7 @@ class SideMenuViewController: UIViewController {
 
 extension SideMenuViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44
+        return 56
     }
 }
 
@@ -81,7 +73,7 @@ extension SideMenuViewController: UITableViewDataSource {
 
         // Highlighted color
         let myCustomSelectionColorView = UIView()
-        myCustomSelectionColorView.backgroundColor = #colorLiteral(red: 0.6196078431, green: 0.1098039216, blue: 0.2509803922, alpha: 1)
+        myCustomSelectionColorView.backgroundColor = .white
         cell.selectedBackgroundView = myCustomSelectionColorView
         return cell
     }

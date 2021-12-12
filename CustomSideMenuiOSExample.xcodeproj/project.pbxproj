@@ -18,11 +18,6 @@
 		C25EF4EA25D06B6A0086441F /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EF4E825D06B6A0086441F /* SideMenuCell.swift */; };
 		C25EF4EB25D06B6A0086441F /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C25EF4E925D06B6A0086441F /* SideMenuCell.xib */; };
 		C25EF52C25D09AC30086441F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EF52B25D09AC30086441F /* MainViewController.swift */; };
-		C2DE6A2F25D2CEA7002B885A /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE6A2E25D2CEA7002B885A /* MusicViewController.swift */; };
-		C2DE6A3225D2CEB2002B885A /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE6A3125D2CEB2002B885A /* MoviesViewController.swift */; };
-		C2DE6A3525D2CEBD002B885A /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE6A3425D2CEBD002B885A /* BooksViewController.swift */; };
-		C2DE6A3825D2CEC8002B885A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE6A3725D2CEC8002B885A /* ProfileViewController.swift */; };
-		C2DE6A3B25D2CED4002B885A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE6A3A25D2CED4002B885A /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,11 +34,6 @@
 		C25EF4E825D06B6A0086441F /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 		C25EF4E925D06B6A0086441F /* SideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuCell.xib; sourceTree = "<group>"; };
 		C25EF52B25D09AC30086441F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		C2DE6A2E25D2CEA7002B885A /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
-		C2DE6A3125D2CEB2002B885A /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
-		C2DE6A3425D2CEBD002B885A /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
-		C2DE6A3725D2CEC8002B885A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		C2DE6A3A25D2CED4002B885A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				C25EF4D125D067D00086441F /* HomeViewController.swift */,
-				C2DE6A2E25D2CEA7002B885A /* MusicViewController.swift */,
-				C2DE6A3125D2CEB2002B885A /* MoviesViewController.swift */,
-				C2DE6A3425D2CEBD002B885A /* BooksViewController.swift */,
-				C2DE6A3725D2CEC8002B885A /* ProfileViewController.swift */,
-				C2DE6A3A25D2CED4002B885A /* SettingsViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,17 +178,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C25EF4E425D06A430086441F /* SideMenuViewController.swift in Sources */,
-				C2DE6A2F25D2CEA7002B885A /* MusicViewController.swift in Sources */,
-				C2DE6A3B25D2CED4002B885A /* SettingsViewController.swift in Sources */,
-				C2DE6A3825D2CEC8002B885A /* ProfileViewController.swift in Sources */,
 				C25EF52C25D09AC30086441F /* MainViewController.swift in Sources */,
 				C25EF4EA25D06B6A0086441F /* SideMenuCell.swift in Sources */,
 				C25EF4D225D067D00086441F /* HomeViewController.swift in Sources */,
 				C25EF4CE25D067D00086441F /* AppDelegate.swift in Sources */,
 				C20E9E2225E1B79B001B1A11 /* SideMenuModel.swift in Sources */,
 				C25EF4D025D067D00086441F /* SceneDelegate.swift in Sources */,
-				C2DE6A3225D2CEB2002B885A /* MoviesViewController.swift in Sources */,
-				C2DE6A3525D2CEBD002B885A /* BooksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

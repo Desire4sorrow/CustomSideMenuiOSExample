@@ -11,7 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
     private var sideMenuViewController: SideMenuViewController!
     private var sideMenuShadowView: UIView!
-    private var sideMenuRevealWidth: CGFloat = 260
+    private var sideMenuRevealWidth: CGFloat = 280
     private let paddingForRotation: CGFloat = 150
     private var isExpanded: Bool = false
     private var draggingIsEnabled: Bool = false
@@ -21,12 +21,10 @@ class MainViewController: UIViewController {
     private var sideMenuTrailingConstraint: NSLayoutConstraint!
 
     private var revealSideMenuOnTop: Bool = true
-    
-    var gestureEnabled: Bool = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = #colorLiteral(red: 0.737254902, green: 0.1294117647, blue: 0.2941176471, alpha: 1)
+        self.view.backgroundColor = .white
 
         // Shadow Background View
         self.sideMenuShadowView = UIView(frame: self.view.bounds)
@@ -142,20 +140,8 @@ extension MainViewController: SideMenuViewControllerDelegate {
             // Movies
             self.showViewController(viewController: UINavigationController.self, storyboardId: "MoviesNavID")
         case 3:
-            // Books
-            self.showViewController(viewController: BooksViewController.self, storyboardId: "BooksVCID")
-        case 4:
-            // Profile
-            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let profileModalVC = storyboard.instantiateViewController(withIdentifier: "ProfileModalID") as? ProfileViewController
-            present(profileModalVC!, animated: true, completion: nil)
-        case 5:
             // Settings
             self.showViewController(viewController: UINavigationController.self, storyboardId: "SettingsNavID")
-        case 6:
-            // Like us on facebook
-            let safariVC = SFSafariViewController(url: URL(string: "https://www.facebook.com/johncodeos")!)
-            present(safariVC, animated: true)
         default:
             break
         }
@@ -207,8 +193,6 @@ extension MainViewController: UIGestureRecognizerDelegate {
     
     // Dragging Side Menu
     @objc private func handlePanGesture(sender: UIPanGestureRecognizer) {
-        
-        guard gestureEnabled == true else { return }
 
         let position: CGFloat = sender.translation(in: self.view).x
         let velocity: CGFloat = sender.velocity(in: self.view).x

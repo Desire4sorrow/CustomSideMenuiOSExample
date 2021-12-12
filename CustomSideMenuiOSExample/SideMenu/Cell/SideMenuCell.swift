@@ -22,9 +22,9 @@ class SideMenuCell: UITableViewCell {
         self.backgroundColor = .clear
         
         // Icon
-        self.iconImageView.tintColor = .white
+        self.iconImageView.tintColor = .black
         
         // Title
-        self.titleLabel.textColor = .white
+        self.titleLabel.textColor = .black
     }
 }
