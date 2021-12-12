@@ -12,9 +12,7 @@ protocol SideMenuViewControllerDelegate {
 }
 
 class SideMenuViewController: UIViewController {
-    @IBOutlet var headerImageView: UIImageView!
     @IBOutlet var sideMenuTableView: UITableView!
-    @IBOutlet var footerLabel: UILabel!
 
     var delegate: SideMenuViewControllerDelegate?
 
@@ -35,17 +33,12 @@ class SideMenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // TableView
+        
         self.sideMenuTableView.delegate = self
         self.sideMenuTableView.dataSource = self
         self.sideMenuTableView.backgroundColor = .white
         self.sideMenuTableView.separatorStyle = .none
-
-        // Register TableView Cell
         self.sideMenuTableView.register(SideMenuCell.nib, forCellReuseIdentifier: SideMenuCell.identifier)
-
-        // Update TableView with the data
         self.sideMenuTableView.reloadData()
     }
 }
@@ -70,8 +63,7 @@ extension SideMenuViewController: UITableViewDataSource {
 
         cell.iconImageView.image = self.menu[indexPath.row].icon
         cell.titleLabel.text = self.menu[indexPath.row].title
-
-        // Highlighted color
+        
         let myCustomSelectionColorView = UIView()
         myCustomSelectionColorView.backgroundColor = .white
         cell.selectedBackgroundView = myCustomSelectionColorView
@@ -80,7 +72,6 @@ extension SideMenuViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.delegate?.selectedCell(indexPath.row)
-        // Remove highlighted color when you press the 'Profile' and 'Like us on facebook' cell
         if indexPath.row == 4 || indexPath.row == 6 {
             tableView.deselectRow(at: indexPath, animated: true)
         }

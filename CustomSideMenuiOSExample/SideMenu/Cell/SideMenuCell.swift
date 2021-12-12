@@ -18,13 +18,8 @@ class SideMenuCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        // Background
         self.backgroundColor = .clear
-        
-        // Icon
         self.iconImageView.tintColor = .black
-        
-        // Title
         self.titleLabel.textColor = .black
     }
 }
