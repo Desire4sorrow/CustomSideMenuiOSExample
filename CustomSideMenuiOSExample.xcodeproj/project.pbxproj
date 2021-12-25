@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C20E9E2225E1B79B001B1A11 /* SideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E9E2125E1B79A001B1A11 /* SideMenuModel.swift */; };
 		C25EF4CE25D067D00086441F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EF4CD25D067D00086441F /* AppDelegate.swift */; };
 		C25EF4D025D067D00086441F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EF4CF25D067D00086441F /* SceneDelegate.swift */; };
 		C25EF4D225D067D00086441F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EF4D125D067D00086441F /* HomeViewController.swift */; };
@@ -15,13 +14,10 @@
 		C25EF4D725D067D20086441F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C25EF4D625D067D20086441F /* Assets.xcassets */; };
 		C25EF4DA25D067D20086441F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25EF4D825D067D20086441F /* LaunchScreen.storyboard */; };
 		C25EF4E425D06A430086441F /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EF4E325D06A430086441F /* SideMenuViewController.swift */; };
-		C25EF4EA25D06B6A0086441F /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EF4E825D06B6A0086441F /* SideMenuCell.swift */; };
-		C25EF4EB25D06B6A0086441F /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C25EF4E925D06B6A0086441F /* SideMenuCell.xib */; };
 		C25EF52C25D09AC30086441F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EF52B25D09AC30086441F /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C20E9E2125E1B79A001B1A11 /* SideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuModel.swift; sourceTree = "<group>"; };
 		C25EF4CA25D067D00086441F /* CustomSideMenuiOSExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomSideMenuiOSExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25EF4CD25D067D00086441F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C25EF4CF25D067D00086441F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,8 +27,6 @@
 		C25EF4D925D067D20086441F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C25EF4DB25D067D20086441F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C25EF4E325D06A430086441F /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
-		C25EF4E825D06B6A0086441F /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
-		C25EF4E925D06B6A0086441F /* SideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuCell.xib; sourceTree = "<group>"; };
 		C25EF52B25D09AC30086441F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				C25EF4ED25D06B740086441F /* Cell */,
-				C20E9E2125E1B79A001B1A11 /* SideMenuModel.swift */,
 				C25EF4E325D06A430086441F /* SideMenuViewController.swift */,
 			);
 			path = SideMenu;
@@ -100,8 +93,6 @@
 		C25EF4ED25D06B740086441F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				C25EF4E825D06B6A0086441F /* SideMenuCell.swift */,
-				C25EF4E925D06B6A0086441F /* SideMenuCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -166,7 +157,6 @@
 				C25EF4DA25D067D20086441F /* LaunchScreen.storyboard in Resources */,
 				C25EF4D725D067D20086441F /* Assets.xcassets in Resources */,
 				C25EF4D525D067D00086441F /* Main.storyboard in Resources */,
-				C25EF4EB25D06B6A0086441F /* SideMenuCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,10 +169,8 @@
 			files = (
 				C25EF4E425D06A430086441F /* SideMenuViewController.swift in Sources */,
 				C25EF52C25D09AC30086441F /* MainViewController.swift in Sources */,
-				C25EF4EA25D06B6A0086441F /* SideMenuCell.swift in Sources */,
 				C25EF4D225D067D00086441F /* HomeViewController.swift in Sources */,
 				C25EF4CE25D067D00086441F /* AppDelegate.swift in Sources */,
-				C20E9E2225E1B79B001B1A11 /* SideMenuModel.swift in Sources */,
 				C25EF4D025D067D00086441F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

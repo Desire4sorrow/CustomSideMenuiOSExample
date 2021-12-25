@@ -36,9 +36,7 @@ class MainViewController: UIViewController {
         }
 
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        self.sideMenuViewController = storyboard.instantiateViewController(withIdentifier: "SideMenuID") as? SideMenuViewController
-        self.sideMenuViewController.defaultHighlightedCell = 0
-        self.sideMenuViewController.delegate = self
+        self.sideMenuViewController = storyboard.instantiateViewController(withIdentifier: "SideMenuUnauthorized") as? SideMenuViewController
         view.insertSubview(self.sideMenuViewController!.view, at: self.revealSideMenuOnTop ? 2 : 0)
         addChild(self.sideMenuViewController!)
         self.sideMenuViewController!.didMove(toParent: self)
@@ -109,18 +107,8 @@ class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController: SideMenuViewControllerDelegate {
-    func selectedCell(_ row: Int) {
-        switch row {
-        case 0:
-            self.showViewController(viewController: UINavigationController.self, storyboardId: "HomeNavID")
-        default:
-            break
-        }
-
-        DispatchQueue.main.async { self.sideMenuState(expanded: false) }
-    }
-
+extension MainViewController {
+    
     func showViewController<T: UIViewController>(viewController: T.Type, storyboardId: String) -> () {
         for subview in view.subviews {
             if subview.tag == 99 {
